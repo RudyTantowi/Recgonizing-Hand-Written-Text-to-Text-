@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handwriting Recognition</title>
+    <link rel="stylesheet" href="../static/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Handwriting Recognition</h1>
+      <p>
+        Upload an image of handwritten text, and we'll extract the text for you!
+      </p>
+      <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required />
+        <button type="submit">Upload</button>
+      </form>
+
+      {% if file_url %}
+      <h2>Uploaded Image:</h2>
+      <img src="{{ file_url }}" alt="Uploaded Image" />
+      {% elif extracted_text is none %}
+      <div class="message">Please select a file and try again.</div>
+      {% endif %} {% if extracted_text %}
+      <h2>Extracted Text:</h2>
+      <div class="extracted-text">
+        <p>{{ extracted_text }}</p>
+      </div>
+      <div class="starfall">
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+        <div class="falling-star"></div>
+      </div>
+    </div>
+    <script src="../static/script.js"></script>
+  </body>
+</html>
